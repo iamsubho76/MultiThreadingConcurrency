@@ -42,7 +42,7 @@ class CDLWorker implements Runnable {
 
 	public void doWork() {
 		try {
-			System.out.println("Thread with ID "+this.id+" starts working...");
+			System.out.println("Thread with ID " + this.id + " starts working...");
 			Thread.sleep(this.random.nextInt(1000));
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -58,7 +58,7 @@ public class TestCountDownLatches {
 		CountDownLatch latch = new CountDownLatch(5);
 
 		for (int i = 0; i < 5; i++)
-			executorService.execute(new CDLWorker(i,latch));
+			executorService.execute(new CDLWorker(i+1 ,latch));
 	
 		try {
 			latch.await();
