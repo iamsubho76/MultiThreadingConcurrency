@@ -50,6 +50,11 @@ public class BankAccountBySychronization {
 		}*/
 	}
 
+	@Override
+	public String toString() {
+		return Integer.valueOf(this.id).toString();
+	}
+	
 	public static void main(String[] args) {
 		final BankAccountBySychronization fooAccount = new BankAccountBySychronization(1, 100d);
 		final BankAccountBySychronization barAccount = new BankAccountBySychronization(2, 100d);
